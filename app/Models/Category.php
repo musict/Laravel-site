@@ -11,6 +11,9 @@ class Category extends Model
 {
     use HasSlug;
     use HasFactory;
+
+    protected $fillable = ['title'];
+
     public function posts(){
         return $this->hasMany(Post::class);
     }
