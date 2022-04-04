@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'App\Http\Controllers\PostController@index')->name('home');
+Route::get('/article/{slug}', 'App\Http\Controllers\PostController@show')->name('posts.single');
+Route::get('/category/{slug}', 'App\Http\Controllers\CategoryController@show')->name('categories.single');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'App\Http\Controllers\Admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'MainController@index')->name('admin.index');

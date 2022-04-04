@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use Carbon\Carbon;
 
 
 class Post extends Model
@@ -50,5 +51,10 @@ class Post extends Model
             return asset("no-image.png");
         }
         return asset("uploads/{$this->thumbnail}");
+    }
+
+    public function getPostDate()
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at)->format('d F, Y');
     }
 }
