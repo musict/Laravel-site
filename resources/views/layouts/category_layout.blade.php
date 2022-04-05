@@ -28,7 +28,7 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="{{ route('home') }}"><img src="public/assets/front/images/version/market-logo.png" alt=""></a>
+                <a class="navbar-brand" href="{{ route('home') }}"><img src="/assets/front/images/version/market-logo.png" alt=""></a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
@@ -50,20 +50,22 @@
         </div><!-- end container-fluid -->
     </header><!-- end market-header -->
 
-    @yield('header')
+    @yield('page-title')
 
-    <section class="section lb @if(!Request::is('/')) m3rem @endif">
+    <section class="section lb">
         <div class="container">
             <div class="row">
+
+                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    @include('layouts.sidebar')
+                </div><!-- end col -->
+
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
 
                     @yield('content')
 
                 </div><!-- end col -->
 
-                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                    @include('layouts.sidebar')
-                </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->
     </section>
@@ -78,7 +80,7 @@
                             <div class="list-group">
                                 <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="public/assets/front/upload/small_04.jpg" alt="" class="img-fluid float-left">
+                                        <img src="/assets/front/upload/small_04.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
                                         <small>12 Jan, 2016</small>
                                     </div>
@@ -86,7 +88,7 @@
 
                                 <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="public/assets/front/upload/small_05.jpg" alt="" class="img-fluid float-left">
+                                        <img src="/assets/front/upload/small_05.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">Let's make an introduction for creative life</h5>
                                         <small>11 Jan, 2016</small>
                                     </div>
@@ -94,7 +96,7 @@
 
                                 <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="public/assets/front/upload/small_06.jpg" alt="" class="img-fluid float-left">
+                                        <img src="/assets/front/upload/small_06.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">Did you see the most beautiful sea in the world?</h5>
                                         <small>07 Jan, 2016</small>
                                     </div>
@@ -111,7 +113,7 @@
                             <div class="list-group">
                                 <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="public/assets/front/upload/small_01.jpg" alt="" class="img-fluid float-left">
+                                        <img src="/assets/front/upload/small_01.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">Banana-chip chocolate cake recipe with customs</h5>
                                         <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -125,7 +127,7 @@
 
                                 <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 justify-content-between">
-                                        <img src="public/assets/front/upload/small_02.jpg" alt="" class="img-fluid float-left">
+                                        <img src="/assets/front/upload/small_02.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">10 practical ways to choose organic vegetables</h5>
                                         <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -139,7 +141,7 @@
 
                                 <a href="marketing-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                     <div class="w-100 last-item justify-content-between">
-                                        <img src="public/assets/front/upload/small_03.jpg" alt="" class="img-fluid float-left">
+                                        <img src="/assets/front/upload/small_03.jpg" alt="" class="img-fluid float-left">
                                         <h5 class="mb-1">We are making homemade ravioli, nice and good</h5>
                                         <span class="rating">
                                                 <i class="fa fa-star"></i>
@@ -192,3 +194,4 @@
 
 </body>
 </html>
+
